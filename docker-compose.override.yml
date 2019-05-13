@@ -1,0 +1,16 @@
+#override defaults for dev
+version: "3.3"
+
+services:
+  app_server:
+    environment:
+      CONTAINER_UID: 1000
+      APPLICATION_UID: 1000
+      APPLICATION_GID: 1000
+    ports:
+      - 8000:8000
+      - 8080:8080
+
+  app_mysql:
+    ports:
+      - "4406:3306"
