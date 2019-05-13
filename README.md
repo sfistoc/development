@@ -6,7 +6,7 @@ The newest installation guide, together with the complete documentation, is avai
 [docs.shopware.com](https://docs.shopware.com/en/shopware-platform-en/getting-started).
 # Steps to install
 
-1. git clone https://github.com/smorkov/development.git
+1. git clone https://github.com/sfistoc/development.git
 2. cd development
 3. git clone https://github.com/shopware/platform.git
 
@@ -21,7 +21,7 @@ docker volume create app_server_mysql
 
 docker volume create app_server_data
 
----copy provided key  folder to /dev-ops/docker/containes/ssh----
+---copy provided key  folder to /dev-ops/docker/containers/ssh/keys----
 
 docker-compose up -d app_data
 
@@ -29,7 +29,7 @@ docker-compose build
 
 docker cp ./ development_app_data_1:/app
 
-docker exec -it development_app_server_1 bash
+docker exec -it development_app_server_1 bash 
 
 ./psh.phar install
 
